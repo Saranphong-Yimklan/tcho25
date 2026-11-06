@@ -171,6 +171,19 @@ nav.main a:hover,nav.main a.on{color:var(--accent);border-bottom-color:var(--acc
   .tline .row::after{left:-3.5px}
 }
 
+/* pdf link lists */
+.pdflist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 2.4rem;margin-top:1.3rem;
+  border-top:1px solid var(--rule)}
+@media(max-width:780px){.pdflist{grid-template-columns:1fr;gap:0}}
+.pdflist .pdf{display:flex;align-items:center;gap:.9rem;padding:.78rem 0;
+  border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink);
+  font-family:var(--thai);font-size:.93rem;transition:color .15s}
+.pdflist .pdf:hover{color:var(--accent)}
+.pdflist .tag{flex:none;font-family:var(--display);font-size:.6rem;letter-spacing:.1em;font-weight:600;
+  color:#fff;background:var(--accent);border-radius:2px;padding:.2rem .4rem;line-height:1}
+.pdflist .pdf:hover .tag{background:var(--deep)}
+.pdflist .ti{line-height:1.45}
+
 /* schedule tabs */
 .tabs{display:flex;gap:0;margin-top:2rem;border-bottom:1px solid var(--rule)}
 .tabs button{appearance:none;background:none;border:0;border-bottom:2px solid transparent;
@@ -741,27 +754,76 @@ footer .fine{margin-top:2.6rem;padding-top:1.2rem;border-top:1px solid rgba(255,
   <div class="wrap">
     <p class="eyebrow">การแข่งขันที่ผ่านมา</p>
     <h2 class="th">ข้อสอบเก่า โจทย์เตรียมความพร้อม และเฉลย</h2>
-    <p class="sub2">Past papers · Preparatory problems · Solutions</p>
-    <p class="lede" style="margin-top:1.4rem">รวมแหล่งข้อสอบย้อนหลังของการแข่งขันเคมีโอลิมปิกระหว่างประเทศและระดับชาติ สำหรับนักเรียนและอาจารย์ผู้แทนศูนย์ใช้เตรียมตัว</p>
+    <p class="sub2">Previous problems · Preparatory problems · Solutions</p>
+    <p class="lede" style="margin-top:1.4rem">ข้อสอบย้อนหลังของการแข่งขันเคมีโอลิมปิกระหว่างประเทศและระดับชาติ สำหรับนักเรียนและอาจารย์ผู้แทนศูนย์ใช้เตรียมตัว ไฟล์ทั้งหมดเป็น PDF เปิดในแท็บใหม่</p>
 
-    <h3 class="th" style="margin-top:2.8rem;font-size:1.18rem;font-weight:500;letter-spacing:0">เคมีโอลิมปิกระหว่างประเทศ (IChO)</h3>
-    <div class="docs">
-      <div class="doc"><div><div class="nm"><a href="https://www.pianetachimica.it/olimpiadi/test_olimpiadi.htm" target="_blank" rel="noopener">คลังข้อสอบ IChO ย้อนหลัง · Pianeta Chimica ↗</a></div><div class="de">ข้อสอบภาคทฤษฎีและภาคปฏิบัติการฉบับทางการ โจทย์เตรียมความพร้อม และเฉลย แยกตามปี ครอบคลุมตั้งแต่ครั้งที่ 41 ปี 2552 ถึงปัจจุบัน</div></div><span class="pill">แนะนำ</span></div>
-      <div class="doc"><div><div class="nm"><a href="https://olimpicos.net/icho/" target="_blank" rel="noopener">IChO Problems and Solutions · Olimpicos ↗</a></div><div class="de">ข้อสอบพร้อมเฉลยปี 2558 ถึง 2569 แยกภาคทฤษฎีและภาคปฏิบัติการ</div></div><span class="pill">คลังข้อสอบ</span></div>
-      <div class="doc"><div><div class="nm"><a href="https://www.icho2026.uz/problems" target="_blank" rel="noopener">IChO ครั้งที่ 58 · ทาชเคนต์ อุซเบกิสถาน ↗</a></div><div class="de">หน้าข้อสอบของเจ้าภาพปี 2569</div></div><span class="pill">2569</span></div>
-      <div class="doc"><div><div class="nm"><a href="https://www.icho2025.ae/problems" target="_blank" rel="noopener">IChO ครั้งที่ 57 · ดูไบ สหรัฐอาหรับเอมิเรตส์ ↗</a></div><div class="de">หน้าข้อสอบของเจ้าภาพปี 2568</div></div><span class="pill">2568</span></div>
-      <div class="doc"><div><div class="nm"><a href="https://2027icho.k12ea.gov.tw/" target="_blank" rel="noopener">IChO ครั้งที่ 59 · ไต้หวัน ↗</a></div><div class="de">เว็บไซต์เจ้าภาพครั้งถัดไป โจทย์เตรียมความพร้อมจะเผยแพร่ก่อนการแข่งขัน</div></div><span class="pill">2570</span></div>
+    <h3 class="th" style="margin-top:2.8rem;font-size:1.18rem;font-weight:500;letter-spacing:0">ข้อสอบ IChO ย้อนหลัง</h3>
+    <div class="pdflist">
+      <a class="pdf" href="https://drive.google.com/file/d/1nBddwDahB2e0b82dcemfjS2WN4HTfsJj/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 58 · ทาชเคนต์ อุซเบกิสถาน</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1bmySsqg3lnqU13TrcUhz0Qv8-sRup24i/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 57 · ดูไบ สหรัฐอาหรับเอมิเรตส์</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1dQ_PLFHQ74-zDfI_s_vnojYIzlKabMvz/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 56 · ริยาด ซาอุดีอาระเบีย</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1U54RmzVAT6bono2VlB0vi-6VOd6MXdWb/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 55 · ซูริก สวิตเซอร์แลนด์</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1mpr9bC1wA1ZDIqmK_3VBbBcF8kDsBj9R/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 54 · เทียนจิน จีน (สอบทางไกล)</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1czuLlPckyPHdBaPra5jARJchFEJ6zsZW/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 53 · โอซากา ญี่ปุ่น (สอบทางไกล)</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1M8YThH1c-VflgSxXw02iF6jH3ERPXgjC/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 52 · อิสตันบูล ตุรกี (สอบทางไกล)</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1-GyGDUpS_0z3zi7Tcl5tJ_h0VLhudm8U/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 51 · ปารีส ฝรั่งเศส</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1R_Jtye1TGTwp1wWb3WWzIKZtvjePdgrc/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 50 · บราติสลาวาและปราก สโลวาเกียและเช็กเกีย</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1pZHtiRbcIIp4mH1huPRpeQL0KtHv_CLh/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 49 · นครปฐม ประเทศไทย</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1A7Kg8uWvT7IrcqRp7FQEbPcNy02m4tYy/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 48 · ทบิลิซี จอร์เจีย</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/19gdP_y_YOLT_243tPL6JdEdQDKik9D-f/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 46–50 · รวมเล่ม</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1uZvWFugmQ_sKQTeKNhy1eFkPinkuDrPz/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 41–45 · รวมเล่ม</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/18IJ8aL_nPYsPXy_7DhnZsLbDgnqiRKkV/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 21–40 · รวมเล่ม</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/19WUuFkRd0i2WoGSWCgASAw0XyI9CWcsu/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 1–20 · รวมเล่ม</span></a>
+    </div>
+
+    <h3 class="th" style="margin-top:2.8rem;font-size:1.18rem;font-weight:500;letter-spacing:0">โจทย์เตรียมความพร้อม IChO ย้อนหลัง</h3>
+    <div class="pdflist">
+      <a class="pdf" href="https://drive.google.com/file/d/1llllkog0a3BAr2lyJVOpHxESDqQUPGMi/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 58 · ทาชเคนต์ อุซเบกิสถาน</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1WMAJaADSup53g0iBRH19x72W9kvNlI9k/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 57 · ดูไบ สหรัฐอาหรับเอมิเรตส์</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1B29-jj9eSSZfZeZ6YXl32NZfKDZ_O-CJ/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 56 · ริยาด ซาอุดีอาระเบีย</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1jKhSnVBidGqkVjg0q5gERVLRp8jOZp3X/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 55 · ซูริก สวิตเซอร์แลนด์</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1NWlhV7PVebNJA5v5E-SMiJsn-2XgtC3_/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 54 · เทียนจิน จีน (สอบทางไกล)</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1uOuJDsVx4vv7hFC1uB1wg3C1D2uhJaU-/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 53 · โอซากา ญี่ปุ่น (สอบทางไกล)</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1B1gO6_dV88QC4Y4TkRtZiwlNRPPN7MLJ/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 52 · อิสตันบูล ตุรกี (สอบทางไกล)</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/12Xzar1C3rA-45tlV5WxJgxscc__74kTP/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 51 · ปารีส ฝรั่งเศส</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1ThVXlrKnmp_ZAj-O1mMsPyDuxHsRuAoh/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 50 · บราติสลาวาและปราก สโลวาเกียและเช็กเกีย</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1RplJRt588JtKy6Lb1TU1tLNB522vUu69/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 49 · นครปฐม ประเทศไทย</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1Xec4RoXOaKY5ra5iUti5QkV-hSLGG76F/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 48 · ทบิลิซี จอร์เจีย</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1TW-ILLCTbEOnM9dMa6oGNRzEM2Sl8axQ/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 47 · บากู อาเซอร์ไบจาน</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1I8Jp1VfDyU5E3RkjEvdpQVaMd9byFNmK/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 46 · ฮานอย เวียดนาม</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1xndsbWeyLlsuRXwm-tqhHl6hZtTGVSv7/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 44 · วอชิงตัน สหรัฐอเมริกา</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1r9RKwY7oIz8sPQFbc1ZrArYG6mA52PMa/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 43 · อังการา ตุรกี</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1lckFBNaC7EdbKzB_W6Ps95BISO87FIi1/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 42 · โตเกียว ญี่ปุ่น</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1Osp7Ru9DKBUgQsj9vJAN-7MLN8Thidqk/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 41 · เคมบริดจ์ สหราชอาณาจักร</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/115hh6M-XnUGI0VJhhEBZLBF-tgvDpJXI/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 40 · บูดาเปสต์ ฮังการี</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/173A56aMVK86JkZpC-YQfTZtt9GBqsZ0C/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 39 · มอสโก รัสเซีย</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/156tE9uOP47JJV24Z5ePly5GnUIBDtaoN/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 38 · คย็องซัน เกาหลีใต้</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1-OFSOHgxBSXTx45qtEQff4IULKYWQH4r/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 37 · ไทเป ไต้หวัน</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1iSSmuzCMbVkGqU-gwPNmbO8aKRQAdPtq/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 36 · คีล เยอรมนี</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1Um-6rXtY0L2QW5GZaxIXoNMcT-9OB-uI/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 35 · เอเธนส์ กรีซ</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1ee9zrEnQuc-S8vFRpVh6HOl78mCjpF1a/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 34 · โกรนิงเงิน เนเธอร์แลนด์</span></a>
+      <a class="pdf" href="https://drive.google.com/file/d/1O7l9khmxBeI08ijtH871p3RRjf8-qB-B/view" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ครั้งที่ 33 · มุมไบ อินเดีย</span></a>
+      <a class="pdf" href="https://2027icho.k12ea.gov.tw/previous-problems" target="_blank" rel="noopener"><span class="tag">WEB</span><span class="ti">ครั้งที่ 45 · มอสโก รัสเซีย · เปิดผ่านหน้ารวมของ IChO 2027</span></a>
+    </div>
+    <p class="note" style="margin-top:1.4rem">ชุดไฟล์ข้างต้นรวบรวมและเผยแพร่โดยเจ้าภาพ <a href="https://2027icho.k12ea.gov.tw/previous-problems" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px">IChO 2027 ไต้หวัน ↗</a> จัดเก็บบน Google Drive</p>
+
+    <h3 class="th" style="margin-top:2.8rem;font-size:1.18rem;font-weight:500;letter-spacing:0">คลังข้อสอบ IChO พร้อมเฉลย</h3>
+    <div class="pdflist">
+      <a class="pdf" href="https://www.pianetachimica.it/olimpiadi/test_olimpiadi.htm" target="_blank" rel="noopener"><span class="tag">WEB</span><span class="ti">Pianeta Chimica · ข้อสอบ โจทย์เตรียมความพร้อม และเฉลย ครั้งที่ 41 เป็นต้นมา</span></a>
+      <a class="pdf" href="https://olimpicos.net/icho/" target="_blank" rel="noopener"><span class="tag">WEB</span><span class="ti">Olimpicos · ข้อสอบพร้อมเฉลย ปี 2558–2569</span></a>
+      <a class="pdf" href="https://www.icho2026.uz/problems" target="_blank" rel="noopener"><span class="tag">WEB</span><span class="ti">เว็บเจ้าภาพครั้งที่ 58 · ทาชเคนต์</span></a>
+      <a class="pdf" href="https://www.icho2025.ae/problems" target="_blank" rel="noopener"><span class="tag">WEB</span><span class="ti">เว็บเจ้าภาพครั้งที่ 57 · ดูไบ</span></a>
     </div>
 
     <h3 class="th" style="margin-top:2.8rem;font-size:1.18rem;font-weight:500;letter-spacing:0">เคมีโอลิมปิกระดับชาติ (TChO)</h3>
-    <div class="docs">
-      <div class="doc"><div><div class="nm"><a href="https://posn.mwit.ac.th/tcho18/doc/prep.pdf" target="_blank" rel="noopener">โจทย์เตรียมความพร้อม TChO ครั้งที่ 18 ↗</a></div><div class="de">แบบฝึกหัด 21 ข้อพร้อมเฉลย และรายการทักษะภาคปฏิบัติการ · เจ้าภาพโรงเรียนมหิดลวิทยานุสรณ์ ปี 2565</div></div><span class="pill">พร้อมเฉลย</span></div>
-      <div class="doc"><div><div class="nm"><a href="https://posn.mwit.ac.th/tcho18/doc/TChO18th-Program.pdf" target="_blank" rel="noopener">สูจิบัตร TChO ครั้งที่ 18 ↗</a></div><div class="de">กำหนดการและรายละเอียดการจัดการแข่งขัน ใช้อ้างอิงรูปแบบงาน</div></div><span class="pill">สูจิบัตร</span></div>
-      <div class="doc"><div><div class="nm"><a href="https://www.posn.or.th/wp-content/uploads/2026/06/statutes-new-tcho110669-1.pdf" target="_blank" rel="noopener">ธรรมนูญการแข่งขันเคมีโอลิมปิกระดับชาติ ↗</a></div><div class="de">ฉบับปรับปรุง พ.ศ. 2569 · มูลนิธิ สอวน.</div></div><span class="pill">ระเบียบ</span></div>
-      <div class="doc"><div><div class="nm"><a href="https://www.posn.or.th/" target="_blank" rel="noopener">มูลนิธิ สอวน. ↗</a></div><div class="de">ประกาศ เอกสารหลักสูตร และข่าวการแข่งขันแต่ละครั้ง</div></div><span class="pill">เว็บไซต์หลัก</span></div>
+    <div class="pdflist">
+      <a class="pdf" href="https://posn.mwit.ac.th/tcho18/doc/prep.pdf" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">โจทย์เตรียมความพร้อม ครั้งที่ 18 พร้อมเฉลย · โรงเรียนมหิดลวิทยานุสรณ์ 2565</span></a>
+      <a class="pdf" href="https://posn.mwit.ac.th/tcho18/doc/TChO18th-Program.pdf" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">สูจิบัตร ครั้งที่ 18 · กำหนดการและรายละเอียดการจัดงาน</span></a>
+      <a class="pdf" href="https://www.posn.or.th/wp-content/uploads/2026/06/statutes-new-tcho110669-1.pdf" target="_blank" rel="noopener"><span class="tag">PDF</span><span class="ti">ธรรมนูญการแข่งขัน ฉบับปรับปรุง พ.ศ. 2569</span></a>
+      <a class="pdf" href="https://www.posn.or.th/" target="_blank" rel="noopener"><span class="tag">WEB</span><span class="ti">มูลนิธิ สอวน. · ประกาศและเอกสารหลักสูตร</span></a>
     </div>
 
-    <p class="note" style="margin-top:1.8rem"><b>หมายเหตุ</b> ข้อสอบ TChO ไม่มีคลังรวมส่วนกลาง แต่ละครั้งเผยแพร่ผ่านเว็บไซต์ของศูนย์เจ้าภาพปีนั้น ๆ ลิงก์ข้างต้นเป็นชุดที่ยังเข้าถึงได้ ศูนย์เจ้าภาพครั้งที่ 25 จะรวบรวมข้อสอบย้อนหลังเพิ่มเติมและเผยแพร่ในหน้านี้ ส่วนคลังข้อสอบ IChO เป็นเว็บไซต์ภายนอกที่จัดทำโดยบุคคลที่สาม ไม่ใช่เว็บไซต์ทางการของคณะกรรมการ IChO</p>
+    <p class="note" style="margin-top:1.8rem"><b>หมายเหตุ</b> ข้อสอบ TChO ไม่มีคลังรวมส่วนกลาง แต่ละครั้งเผยแพร่ผ่านเว็บไซต์ของศูนย์เจ้าภาพปีนั้น ๆ ซึ่งหลายเว็บปิดไปแล้ว ลิงก์ข้างต้นเป็นชุดที่ยังเข้าถึงได้ ศูนย์เจ้าภาพครั้งที่ 25 จะรวบรวมเพิ่มเติมและเผยแพร่ในหน้านี้ ส่วนคลังข้อสอบ IChO สองแห่งท้ายสุดเป็นเว็บไซต์ที่บุคคลที่สามจัดทำ ไม่ใช่เว็บไซต์ทางการของคณะกรรมการ IChO</p>
   </div>
 </section>
 
